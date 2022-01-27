@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日本のことわざ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Quiz thành ngữ tiếng Nhật</h1>
+<p>Hãy tìm câu tiếng Nhật có nghĩa tương đương </p>
+<div id="quiz">
+    <div id="question"></div>
+    <button class="ans" id="ans0"onclick="chooseAns(this.id)"></button>
+    <button class="ans" id="ans1"onclick="chooseAns(this.id)"></button>
+    <button class="ans" id="ans2"onclick="chooseAns(this.id)"></button>
+    <button class="ans" id="ans3"onclick="chooseAns(this.id)"></button>
+</div>
+<br>
+<div id="suggest"></div>
+<div id="btt">
+    <button   onclick="getHint()">Hint</button>
+    <button  id="next" onclick="nextQuiz()">Next Quiz</button>
+</div>
+
+<script src="Quiz.js"></script>
+<script src="GameManager.js"></script>
+</body>
+</html>
