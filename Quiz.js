@@ -5,6 +5,9 @@ class Quiz {
         this.correct = correct;
         this.hint = hint;
     }
+    getHint(){
+        return this.hint;
+    }
 
 }
 let quiz1 = new Quiz("Của thiên trả địa", ["猫に小判","残り物には福がある","悪銭身に付かず","馬の耳に念仏"],"悪銭身に付かず",

@@ -22,11 +22,9 @@ class GameManager {
         }
     }
     //getHint - gợi ý.
-    getHint(hint){
-
-
+    getHint(){
+        return this.quizs[this.current].hint;
     }
-
     //nextQuiz - chuyển sang câu hỏi tiếp theo nếu câu hỏi hiện tại < số câu hỏi có sẵn thì next,
     //nếu không thì báo đã hết câu hỏi và tự động hiển thị về câu quiz ban đầu.
     nextQuiz(){
@@ -68,7 +66,15 @@ function chooseAns(id) {
     let ans = document.getElementById(id).innerHTML;
     gameManager.chooseAnswer(ans);
 }
+function getHint() {// khi chỏ đến các quiz tương ứng sẽ hiển thị hint tương ứng.
 
+
+    document.getElementById("suggest").setAttribute("style","display: block !important")
+}
+function displayHint(index) {
+    document.getElementById("suggest").innerHTML = gameManager.quizs[index].hint;
+}
+displayHint(0)
 
 
 displayQuiz(0);
